@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <style>
+    body { font-family: "Poppins", sans-serif; padding: 20px; background: #f5f7fa; }
+    .product-details { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    img { max-width: 100%; border-radius: 10px; }
+    h2 { color: #007bff; margin-top: 15px; }
+    p { color: #333; margin: 10px 0; }
+    a { display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="product-details">
+    <img id="productImg" src="images/mobile/iphone14.jpg" alt="Product Image">
+    <h2 id="productName"></h2>
+    <p id="productPrice"></p>
+    <p id="productDesc"></p>
+    <a href="index.html">← Back to Products</a>
+  </div>
+
+  <script>
+    // Get query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const price = params.get('price');
+    const desc = params.get('desc');
+    const img = params.get('img');
+
+    // Set content dynamically
+    document.getElementById('productName').textContent = name;
+    document.getElementById('productPrice').textContent = "Price: " + price;
+    document.getElementById('productDesc').textContent = desc;
+    document.getElementById('productImg').src = img;
+  </script>
+</body>
+</html>

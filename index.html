@@ -266,7 +266,7 @@
       <li><a href="#home"><h2>Home</h2></a></li>
       <li><a href="#products"><h2>Products</h2></a></li>
 
-      
+
       <li class="dropdown">
         <a href="#"><h2>Dealers ▼</h2></a>
         <div class="dropdown-content">
@@ -301,7 +301,7 @@
         <div class="product-info">
           <h3>Acer Aspire 7</h3>
           <p class="price">₹89,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('Acer Aspire 7','₹89,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.</p>
         </div>
       </div>
@@ -311,7 +311,7 @@
         <div class="product-info">
           <h3>Acer Flip 360</h3>
           <p class="price">₹74,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('Acer Flip 360','₹74,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Convertible Acer laptop with touchscreen and 8GB RAM.</p>
         </div>
       </div>
@@ -321,7 +321,7 @@
         <div class="product-info">
           <h3>HP Pavilion</h3>
           <p class="price">₹75,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('HP Pavilion','₹75,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">HP Pavilion with Intel i5 processor and 8GB RAM.</p>
         </div>
       </div>
@@ -331,7 +331,7 @@
         <div class="product-info">
           <h3>HP Envy</h3>
           <p class="price">₹82,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('HP Envy','₹82,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">HP Envy laptop with high-speed SSD and stylish design.</p>
         </div>
       </div>
@@ -341,7 +341,7 @@
         <div class="product-info">
           <h3>HP Spectre x360</h3>
           <p class="price">₹1,05,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('HP Spectre x360','₹1,05,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Premium HP laptop with touch display and long battery life.</p>
         </div>
       </div>
@@ -352,7 +352,7 @@
         <div class="product-info">
           <h3>iPhone 12</h3>
           <p class="price">₹69,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('iPhone 12','₹69,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Apple iPhone 12 with OLED display and dual-camera system.</p>
         </div>
       </div>
@@ -362,7 +362,7 @@
         <div class="product-info">
           <h3>iPhone 14</h3>
           <p class="price">₹99,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('iPhone 14','₹99,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Apple iPhone 14 with A15 Bionic chip and improved camera.</p>
         </div>
       </div>
@@ -372,7 +372,7 @@
         <div class="product-info">
           <h3>OnePlus Nord</h3>
           <p class="price">₹29,999</p>
-          <button onclick="toggleDescription(this)">Show Description</button>
+<button onclick="goToProductPage('OnePlus Nord','₹29,999','Powerful Acer laptop with AMD Ryzen 5 and 16GB RAM.','images/laptop/acer.jpg')">View Details</button>
           <p class="description">Affordable OnePlus smartphone with fast performance.</p>
         </div>
       </div>
@@ -442,5 +442,13 @@
       this.reset();
     });
   </script>
+  
+    <script>
+        // Navigate to product details page with query parameters
+        function goToProductPage(name, price, desc, img) {
+        const url = `products.html?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&desc=${encodeURIComponent(desc)}&img=${encodeURIComponent(img)}`;
+        window.location.href = url;
+        }
+        </script>
 </body>
 </html>
